@@ -27,4 +27,24 @@ This project follows the Medallion Architecture:<br>
 - PySpark<br>
 - Spark SQL<br>
 - Delta Lake<br>
-- Unity Catalog<br>
+- Unity Catalog<br><br>
+---
+📂 Project Structure
+---
+├── datasets/           # Sample raw data files<br>
+├── script/             # Databricks Notebooks (.ipynb / .py)<br>
+│   ->├── 01_Bronze.py    # Raw Ingestion & Delta Table creation<br>
+│   ->├── 02_Silver.py    # Cleaning, Type-casting & Validation<br>
+│   ->└── 03_Gold.py      # Dimensional Modeling (Business Logic)<br>
+└── README.md           # Documentation<br><br>
+
+---
+🏁 Getting Started
+---
+- Clone the repo: git clone https://github.com/jatjatlopez/databricks_DE_proj.git
+
+- Import to Databricks: Upload the notebooks in the script/ folder to your Databricks Workspace.
+
+- Configure Catalog: Ensure Unity Catalog is enabled and update the catalog/schema names within the notebooks.
+
+- Run: Execute notebooks sequentially (Bronze → Silver → Gold).
